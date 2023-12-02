@@ -47,3 +47,4 @@ variable "vpc_id" {
   description = "(Required) VPC ID of VPC for application deployment."
 }
 
+
