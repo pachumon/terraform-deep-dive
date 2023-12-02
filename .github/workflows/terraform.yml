@@ -45,3 +45,23 @@ jobs:
         id: validate
         if: (success() || failure())
         run: terraform validate
+
+      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+      - name: Terraform Init     
+        working-directory: ./application_config
+        id: initapp
+        run: terraform init
+      
+      # Run a terraform fmt for push
+      - name: Terraform Format
+        working-directory: ./application_config
+        id: fmtapp
+        run: terraform fmt -check
+      
+      # Run a terraform validate
+      # Run even if formatting fails
+      - name: Terraform Validate
+        working-directory: ./application_config
+        id: validateapp
+        if: (success() || failure())
+        run: terraform validate
