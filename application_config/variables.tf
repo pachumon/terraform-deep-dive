@@ -48,12 +48,12 @@ variable "api_key" {
 # }
 
 variable "tfe_organization" {
-  type = string
+  type        = string
   description = "(Required) Name of TFC organization"
 }
 
 variable "tfe_workspace_name" {
-  type = string
+  type        = string
   description = "(Required) Name of network workspace to get information"
 }
 
