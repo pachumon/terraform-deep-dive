@@ -54,6 +54,6 @@ variable "tfe_organization" {
 
 variable "tfe_workspace_name" {
   type        = string
-  description = "(Required) Name of network workspace to get information"
+  description = "(Required) Name of TFC network workspace to get information"
 }
 
